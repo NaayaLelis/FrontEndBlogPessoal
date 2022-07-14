@@ -1,0 +1,17 @@
+#bginicio{
+    background-image: url('https://i.imgur.com/GLxmGCo.png');
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100vw;
+    height:150vh;
+ 
+}
+
+#bgcor2{
+    background-color: rgb(217,217,217,85) !important;
+}
+
+
+#bgcor{
+    background-color: rgb(25, 60, 82) !important;
+}

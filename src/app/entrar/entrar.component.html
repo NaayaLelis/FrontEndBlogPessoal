@@ -1,0 +1,79 @@
+<div class="container-fluid">
+<div class = "row">
+
+	<div class ='col-md-12' id="img-bg">
+
+		<div class="global-container">
+			<h2>ENTRAR</h2>
+			<form>
+				<div class="form-group ml-4">
+					<label for="usuario">Usuario</label>
+					<input [(ngModel)]="usuarioLogin.usuario" type="text" class="form-control form-control-sm ml-1" id="usuario" name="usuario" aria-describedby="emailHelp">
+				</div>
+				<div class="form-group ml-4 mb-5 ">
+					<label for="senha">Senha</label>
+					
+					<input [(ngModel)]='usuarioLogin.senha' type="password" class="form-control form-control-sm" id="senha" name="senha">
+					<a href="#" class="mr-5" style="float:right;font-size:14px; ">Esqueceu a senha?</a>
+				</div>
+				<button type="submit" class="btn btn-primary btn-block ml-5" id="bgcor"  (click)="entrar()" ><span>Entrar </span></button> 
+				<div class="sign-up ml-0">
+
+					Não tem uma conta? 
+					<a class="ml-0" routerLink="/cadastrar">Cadastre-se</a>
+				</div>
+
+				
+
+			</form>
+
+		
+			
+				
+		
+		
+		</div>
+
+		</div>
+
+		</div>
+
+
+	</div>
+
+
+
+
+
+
+
+
+
+
+<!--<div class="global-container">
+	<div class="card login-form">
+	<div class="card-body">
+		<h3 class="card-title text-center " >Entrar</h3>
+		<div class="card-text">
+			<form>
+				<div class="form-group">
+					<label for="usuario">Usuario</label>
+					<input [(ngModel)]="usuarioLogin.usuario" type="text" class="form-control form-control-sm" id="usuario" name="usuario" aria-describedby="emailHelp">
+				</div>
+				<div class="form-group">
+					<label for="senha">Senha</label>
+					<a href="#" style="float:right;font-size:12px;">Esqueceu a senha?</a>
+					<input [(ngModel)]='usuarioLogin.senha' type="password" class="form-control form-control-sm" id="senha" name="senha">
+				</div>
+				<button type="submit" class="btn btn-primary btn-block" id="bgcor" (click)="entrar()" >Entrar</button>
+				<div class="sign-up">
+					Não tem uma conta? <a routerLink="/cadastrar">Cadastre-se</a>
+				</div>
+			</form>
+		</div>
+	</div>
+</div>
+</div> -->
+
+
+

@@ -1,0 +1,138 @@
+html,body { 
+	height: 100%; 
+}
+
+.global-container{
+	width: 300px;
+	height:450px;
+	background: (255,255,255,0.25);
+	box-shadow: 0 8px 32px 0 rgba(31,38,135,0.37);
+	backdrop-filter: blur(5px);
+	-webkit-backdrop-filter:blur(5PX) ;
+	border-radius: 10px;
+	border: 1px solid rgb(255,255,255,0.18);
+	margin:80px auto;	
+}
+
+form{
+	padding-top: 10px;
+	font-size: 14px;
+	margin-top: 30px;
+}
+label{
+	display: block;
+	color:whitesmoke;
+	margin-top: 10px;
+	
+}
+
+input{
+	width:80%;
+	background:transparent;
+	border:none;
+	outline:none;
+	border-bottom: 1px solid white;
+	padding:10px;
+	color:antiquewhite;
+}
+
+::placeholder{
+	color:antiquewhite;
+	opacity:0.4;
+}
+
+button{
+	width:60%;
+	margin-top:10px;
+	padding:8px;
+	border:none;
+	outline: none;
+	background:rgb(25, 60, 82);
+	color: antiquewhite;
+	font-size: 17px;
+	cursor:pointer;
+	transition:0.2s;
+	border-radius: 5px;
+	margin-top: 10px;
+
+}
+
+a{
+	margin-left: 30%;
+	text-decoration: none;
+	color:antiquewhite
+}
+
+button span{
+	display:inline-block;
+	position: relative;
+	transition:0.5s;
+	
+}
+
+button span::after{
+	content:'\00bb';
+	position:absolute;
+	opacity:0;
+	top:0;
+	right:-15px;
+	transform:0.5s;
+}
+
+button:hover span{
+	padding-right: 25px;
+} 
+
+button:hover span:after{
+
+	opacity:1;
+	right: 0;
+}
+
+
+.card-title{ 
+	
+	font-weight:300; }
+
+.btn{
+	font-size: 14px;
+	margin-top:20px;
+}
+
+
+.login-form{ 
+	width:330px;
+	margin:20px;
+}
+
+.sign-up{
+	text-align:center;
+	padding:20px 0 0;
+}
+
+.alert{
+	margin-bottom:-30px;
+	font-size: 13px;
+	margin-top:20px;
+}
+
+#bgcor{
+    background-color: rgb(25, 60, 82) !important;
+}
+
+
+
+#img-bg{
+    background-image: url("https://i.imgur.com/SBdEGBR.jpg");
+     background-size: cover;
+   background-repeat: no-repeat;
+   width: 100vw;
+   height:100vh;	
+}
+
+h2{
+	text-align:center;
+	color:antiquewhite;
+	margin-top: 10px;
+}
+

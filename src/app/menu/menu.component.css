@@ -1,0 +1,18 @@
+#bgcor2{
+    background-color: rgb(217,217,217,85) !important;
+}
+
+a{
+    cursor: pointer;
+}
+
+.alinharNavbar{
+display:flex;
+justify-content: space-between;
+margin:0%;
+padding:0%;
+align-items: center;
+margin-bottom: 5%;    
+         
+}
+

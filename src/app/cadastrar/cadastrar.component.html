@@ -1,0 +1,135 @@
+<div class="container-fluid">
+	<div class = "row">
+	
+		<div class ='col-md-12' id='bg-dinisiacadastro'>
+	
+			<div class="global-container">
+				
+				<form>
+					<h2 class="mb-5">Cadastre-se</h2>
+					<div class="form-group ml-5">
+						<label for="nome">Nome</label>
+						<input [(ngModel)]='usuario.nome' type="text" class="form-control form-control-sm" name="nome"
+							id="nome">
+					</div>
+
+				
+					<div class="form-group ml-5 ">
+						<label for="usuario">Usuário</label>
+						<input [(ngModel)]="usuario.usuario" type="email" class="form-control form-control-sm"
+							name='usuario' id="usuario" aria-describedby="emailHelp">
+					</div>
+						
+					<div class="form-group ml-5">
+						<label for="confirmarSenha">Senha</label>
+						<input (input)="confirmarSenha($event)" type="password" class="form-control form-control-sm"
+							id="confirmarSenha">
+					</div>
+
+
+					<div class="form-group ml-5">
+						<label for="senha">Confirme sua Senha</label>
+						<input [(ngModel)]="usuario.senha" type="password" class="form-control form-control-sm"
+							name='senha' id="senha">
+					</div>
+
+
+					<div class="form-group">
+                        <label for="tipo">Tipo de Usuário</label>
+                        <select class="form-control" name="tipo" id="tipo" (change)="tiparUsuario($event)">
+                            <option>Selecione um tipo de usuário</option>
+                            <option value="normal">Normal</option>
+                            <option value="adm">Administrador</option>
+                        </select>
+                    </div>
+
+
+
+
+					<button type="submit" class="btn btn-primary btn-block ml-5"  (click)="cadastrar()" ><span>Cadastrar </span></button> 
+					<div class="sign-up ml-0">
+	
+						Já tem uma conta?
+						<a class="ml-0" routerLink="/entrar">Entrar</a>
+					</div>
+	
+					
+	
+				</form>
+	
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<!--<div class="container-fluid">
+	<div class = "row">
+	
+		<div class ='col-md-12' id='bg-dinisiacadastro'>
+
+
+<div class="global-container">
+
+	<form>
+	<div class="card login-form">
+		<div class="card-body " >
+			<h3 class="card-title text-center">Cadastro</h3>
+			<div class="card-text">
+				<form>
+					<div class="form-group">
+						<label for="nome">Nome</label>
+						<input [(ngModel)]='usuario.nome' type="text" class="form-control form-control-sm" name="nome"
+							id="nome">
+					</div>
+					<div class="form-group">
+						<label for="usuario">Usuário</label>
+						<input [(ngModel)]="usuario.usuario" type="email" class="form-control form-control-sm"
+							name='usuario' id="usuario" aria-describedby="emailHelp">
+					</div>
+					<div class="form-group">
+						<label for="confirmarSenha">Senha</label>
+						<input (input)="confirmarSenha($event)" type="password" class="form-control form-control-sm"
+							id="confirmarSenha">
+					</div>
+					<div class="form-group">
+						<label for="senha">Confirme sua Senha</label>
+						<input [(ngModel)]="usuario.senha" type="password" class="form-control form-control-sm"
+							name='senha' id="senha">
+					</div>
+
+					<div class="form-group">
+						<label for="tipo">Tipo de Usuário</label>
+						<select class="form-control" name="tipo" id="tipo" (change)="tiparUsuario($event)">
+							<option>Selecione um tipo de usuário:</option>
+							<option value="normal">Normal</option>
+							<option value="adm">Administrador</option>
+						</select>
+					</div>
+
+
+					<div class="form-group">
+						<label for="foto">Link da foto</label>
+						<input [(ngModel)]='usuario.foto' type="text" class="form-control form-control-sm" name="foto"
+							id="foto">
+					</div>
+					<button type="submit" (click)="cadastrar()" class="btn btn-primary btn-block"
+						id="bgcor">Cadastrar</button>
+					<div class="entrar">
+						Já tem uma conta? <a routerLink="/entrar">Entrar</a>
+					</div>
+				</form>
+			</div>
+		</div>
+	</div> -->
+
