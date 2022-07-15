@@ -1,3 +1,4 @@
+import { ThisReceiver } from '@angular/compiler';
 import { Component, OnInit } from '@angular/core';
 import { Router } from '@angular/router';
 import { environment } from 'src/environments/environment.prod';
@@ -18,16 +19,19 @@ export class InicioComponent implements OnInit {
 
   postagem: Postagem = new Postagem()
   listaPostagens: Postagem[]
+  tituloPost: string
 
-  tema : Tema =  new Tema ()
+
+  tema: Tema = new Tema()
   listaTemas: Tema[]
-  idTema:number
+  idTema: number
+  nomeTema: string
 
-  usuario: Usuario = new Usuario ()
+  usuario: Usuario = new Usuario()
   idUsuario = environment.id
-  
-key= 'data'
-reverse = true
+
+  key = 'data'
+  reverse = true
 
   constructor(
     private router: Router,
@@ -40,7 +44,7 @@ reverse = true
 
   ngOnInit() {
 
-    window.scroll(0,0)
+    window.scroll(0, 0)
     if (environment.token == '') {
       this.router.navigate(['/entrar'])
     }
@@ -58,30 +62,30 @@ reverse = true
   }
 
 
-  findByIdTema(){
-    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema)=>{
+  findByIdTema() {
+    this.temaService.getByIdTema(this.idTema).subscribe((resp: Tema) => {
       this.tema = resp
     })
   }
 
-  getAllPostagens(){
-    this.postagemService.getAllPostagens().subscribe((resp: Postagem[])=>{
+  getAllPostagens() {
+    this.postagemService.getAllPostagens().subscribe((resp: Postagem[]) => {
       this.listaPostagens = resp
 
 
     })
   }
-  
 
-  findByIdUsuario(){
-    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario)=>{
+
+  findByIdUsuario() {
+    this.authService.getByIdUsuario(this.idUsuario).subscribe((resp: Usuario) => {
       this.usuario = resp
     })
 
   }
 
 
-  publicar(){
+  publicar() {
     this.tema.id = this.idTema
     this.postagem.tema = this.tema
 
@@ -96,6 +100,29 @@ reverse = true
     })
   }
 
+
+  findByTituloPostagem() {
+
+    if (this.tituloPost == '') {
+      this.getAllPostagens()
+    } else {
+      this.postagemService.getByTituloPostagem(this.tituloPost).subscribe((resp: Postagem[]) => {
+        this.listaPostagens = resp
+      })
+    }
   }
+
+  findByNomeTema(){
+    if (this.nomeTema==''){
+      this.getAllTemas()
+
+    }else{
+      this.temaService.getByNomeTema(this.nomeTema).subscribe((resp: Tema[])=>{
+        this.listaTemas = resp
+      })
+    }
+
+  }
+}
 
 
