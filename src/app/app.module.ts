@@ -19,6 +19,9 @@ import { TokenInterceptorService } from './service/token-interceptor.service';
 import { PostagemEditComponent } from './edit/postagem-edit/postagem-edit.component';
 import { PostagemDeleteComponent } from './delete/postagem-delete/postagem-delete.component';
 import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component';
+import { AlertasComponent } from './alertas/alertas.component';
+import { ModalModule } from 'ngx-bootstrap/modal';
+
 
 @NgModule({
   declarations: [
@@ -35,14 +38,19 @@ import { UsuarioEditComponent } from './edit/usuario-edit/usuario-edit.component
     PostagemEditComponent,
     PostagemDeleteComponent,
     UsuarioEditComponent,
+    AlertasComponent,
     
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    FormsModule
+    FormsModule,
+    ModalModule.forRoot()
+    
+
   ],
+  
   providers: [{
     provide:LocationStrategy,
     useClass: HashLocationStrategy
