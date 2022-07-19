@@ -15,20 +15,20 @@ export class AuthService {
     ) { }
 
     entrar(usuarioLogin:UsuarioLogin):Observable<UsuarioLogin>{
-      return this.http.post<UsuarioLogin>('http://localhost:8080/usuarios/logar', usuarioLogin )
+      return this.http.post<UsuarioLogin>('https://dinisialtda.herokuapp.com/usuarios/logar', usuarioLogin )
     }
 
     cadastrar(usuario: Usuario): Observable<Usuario>{
-      return this.http.post<Usuario>('http://localhost:8080/usuarios/cadastrar',usuario)
+      return this.http.post<Usuario>('https://dinisialtda.herokuapp.com/usuarios/cadastrar',usuario)
     }
 
     getByIdUsuario(id:number):Observable<Usuario>{
-      return this.http.get<Usuario>(`http://localhost:8080/usuarios/${id}`)
+      return this.http.get<Usuario>(`https://dinisialtda.herokuapp.com/usuarios/${id}`)
 
     }
 
     recadastrar(usuario: Usuario): Observable<Usuario> {
-      return this.http.put<Usuario>('http://localhost:8080/usuarios/atualizar', usuario)
+      return this.http.put<Usuario>('https://dinisialtda.herokuapp.com/usuarios/atualizar', usuario)
     }
 
     logado(){
